@@ -15,4 +15,4 @@ Abstract: *We present a method to efficiently generate 3D-aware high-resolution 
 ## :rocket: News
 * Code will released soon.
 
-## :Method
+## Method
