@@ -17,3 +17,16 @@ viewing direction and position coefficients. Moreover, we propose a view-consist
 * Code will released soon.
 
 ## Method
+
+## Citation
+
+If you find our work helpful, please **star🌟** this repo and **cite📑** our paper. Thanks for your support!
+
+```
+@article{kumar2023generative,
+  title={Generative Multiplane Neural Radiance for 3D-Aware Image Generation},
+  author={Kumar, Amandeep and Bhunia, Ankan Kumar and Narayan, Sanath and Cholakkal, Hisham and Anwer, Rao Muhammad and Khan, Salman and Yang, Ming-Hsuan and Khan, Fahad Shahbaz},
+  journal={arXiv preprint arXiv:2304.01172},
+  year={2023}
+}
+```
