@@ -16,8 +16,6 @@ viewing direction and position coefficients. Moreover, we propose a view-consist
 ## :rocket: News
 * Code will released soon.
 
-## Method
-
 ## Citation
 
 If you find our work helpful, please **star🌟** this repo and **cite📑** our paper. Thanks for your support!
