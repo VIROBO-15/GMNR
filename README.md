@@ -1,4 +1,4 @@
-<h1 align="center">Generative Multiplane Neural Radiance (GMNR)</h1>
+<h1 align="center">Generative Multiplane Neural Radiance (GMNR) (ICCV 2023)</h1>
 <p align="center">for 3D-Aware Image Generation</p>
 
 <p align="center">
