@@ -12,7 +12,7 @@ from gmnr.utils import get_config
 DEFAULT_ADDR = "127.0.1.1"
 DEFAULT_PORT = "8378"
 
-CMD_GMPI = "export CUDA_LAUNCH_BLOCKING=1 && \
+CMD_gmnr = "export CUDA_LAUNCH_BLOCKING=1 && \
        export OMP_NUM_THREADS=10 && \
        export MKL_NUM_THREADS=10 && \
        export PYTHONPATH={}:$PYTHONPATH && \
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--task-type",
-        choices=["gmpi"],
+        choices=["gmnr"],
         required=True,
         help="generative mpi's taks type",
     )
@@ -66,18 +66,18 @@ if __name__ == "__main__":
 
     repo_path = os.path.dirname(os.path.abspath(__file__))
 
-    if args.task_type == "gmpi":
-        print("\nIn launch, task_type: GMPI\n")
-        f_script = os.path.join(repo_path, "run_gmpi.py")
-        exp_config = "./configs/gmpi.yml"
+    if args.task_type == "gmnr":
+        print("\nIn launch, task_type: gmnr\n")
+        f_script = os.path.join(repo_path, "run_gmnr.py")
+        exp_config = "./configs/gmnr.yml"
     else:
         raise ValueError
 
     config = get_config(exp_config, None)
 
-    if args.task_type in ["gmpi"]:
-        tmp_cmd = CMD_GMPI.format(
-            f"{repo_path}/gmpi/models:{repo_path}",  # the 1st is for loading pretrained wegights, it requires `torch_utils` from StyleGAN2
+    if args.task_type in ["gmnr"]:
+        tmp_cmd = CMD_gmnr.format(
+            f"{repo_path}/gmnr/models:{repo_path}",  # the 1st is for loading pretrained wegights, it requires `torch_utils` from StyleGAN2
             f_script,
             exp_config,
             args.run_type,
